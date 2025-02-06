@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(to right,#029aff,#00ffc8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.todo_list{
+    max-width: 600px;
+    width: 97%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0);
+    overflow: hidden;
+    height: 90%;
+    position: relative;
+    padding-top: 50px;
+}
+.insert_contianer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    background-color: #0090f0;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+}
+.insert_contianer input{
+    width: 89%;
+    height: 40px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    transition: all 0.4s ease-in-out;
+}
+.insert_contianer input:focus{
+    background-color: #91d3ff8f;
+    color: white;
+    padding-left: 10px;
+}
+.insert_contianer button{
+    width: 10%;
+    height: 40px;
+    color: white;
+    background-color: #7600bb;
+    border:none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.insert_contianer button:hover{
+    background-color: #0071bd;
+}
+.values_contianer{
+    width: 100%;
+    height: 100%;
+    padding: 2px 3px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: white;
+}
+.values_contianer::-webkit-scrollbar {
+    width: 10px;
+}
+.values_contianer::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.values_contianer::-webkit-scrollbar-thumb {
+    background-color: dodgerblue;
+    border-radius: 10px;
+}
+/*===============================================*/
+.values_contianer .todo{
+    width: 100%;
+    height:160px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 5px;
+    margin: 2px 0;
+    border: 2px solid rgb(0, 119, 255);
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    padding-right: 55px;
+}
+.values_contianer .todo .crud_button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0090f0;
+    height: 100%;
+    width: 55px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.values_contianer .todo .crud_button button{
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    color: white;
+    font-size: 20px;
+    border: 2px solid rgb(255, 255, 255);
+    margin:2px;
+    cursor: pointer;
+}
+.values_contianer .todo .crud_button button:nth-child(1){
+    background-color: red;
+}
+.values_contianer .todo .crud_button button:nth-child(2){
+    background-color: #2bff00;
+}
+.values_contianer .todo .crud_button button:nth-child(3){
+    background-color: rgb(0, 204, 255);
+}
+
+
+.values_contianer .todo .todo_text{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    color: rgb(0, 119, 255);
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.values_contianer .todo .todo_text::-webkit-scrollbar {
+    width: 10px;
+}
+.values_contianer .todo .todo_text::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.values_contianer .todo .todo_text::-webkit-scrollbar-thumb {
+    background-color: rgb(30, 165, 255);
+    border-radius: 10px;
+}
+.values_contianer .todo .todo_text p{
+    width:100%;
+    font-size: 17px;
+    background-color: rgba(255, 255, 255, 0.767);
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+.values_contianer .todo .todo_text b{
+    color: red;
+    text-align: right;
+}
+.values_contianer .todo .todo_text b span{
+    margin-right: 5px;
+}
+.nice{
+    background-color: rgb(0, 255, 0);
+}
+.nice p,
+.nice b{
+    color: #00a108;
+    text-decoration: line-through;
+}
+/*===============================================*/
+.edit{
+    position: absolute;
+    z-index: 100;
+    height: 300px;
+    max-width: 600px;
+    width: 97%;
+    background-color: #0090f0;
+    border-radius:15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.edit textarea{
+    width:85% ;
+    height: 90%;
+    resize: none;
+    padding: 5px;
+    border-radius:15px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    transition: all 0.4s ease;
+}
+.edit textarea:focus{
+    background-color: #91d3ff8f;
+    color: white;
+}
+.edit button{
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: #7600bb;
+    border:none;
+    border-radius: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.edit button:hover{
+    background-color: #0071bd;
+}

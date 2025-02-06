@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>CRUDS</title>
+</head>
+<body>
+    <div class="todo_list">
+        <div class="insert_contianer">
+            <input type="text" id="text"placeholder="Enter Task...">
+            <button class="submit" onclick="create(new Date())"><i class="fa-solid fa-golf-ball-tee"></i></button>
+        </div>
+        <div class="values_contianer" id="values_contianer">
+            <!-- <div class="todo">
+                <div class="todo_text">
+                    <b><span>2025/09/10</span><i class="fa-solid fa-calendar-days"></i></b>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, assumenda officia culpa cum perspiciatis vero dolorum modi iure aperiam sed incidunt suscipit consequuntur dolore delectus ullam minima quidem enim aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt vero eos provident! In omnis possimus aut laudantium unde repellendus libero iste fuga impedit quod debitis, doloribus, et quo repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis voluptatem alias dicta adipisci facere quos repellendus tempora voluptate voluptatum in eligendi iusto id rem error iure, ab expedita! Quod, distinctio?
+                    </p>
+                </div>
+                <div class="crud_button">
+                    <button><i class="fa-solid fa-trash"></i></button>
+                    <button><i class="fa-solid fa-check"></i></button>
+                    <button><i class="fa-solid fa-pen-to-square"></i></button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="edit" style="display: none;">
+        <textarea placeholder="new Task..."></textarea>
+        <button><i class="fa-solid fa-golf-ball-tee"></i></button>
+    </div>
+    <script src="javascript/scripts.js"></script>
+</body>
+</html>
